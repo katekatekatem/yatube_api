@@ -93,9 +93,6 @@ STATICFILES_DIRS = ((BASE_DIR / 'static/'),)
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        # если ставлю IsAuthenticatedOrReadOnly, то мне в Follow нужно дабавлять permission_classes,
-        # так что по количеству строк тоже самое выходит, только лучше жестче на уровне проекта поставить,
-        # а потом ослабить
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [

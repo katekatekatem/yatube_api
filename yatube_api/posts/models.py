@@ -27,8 +27,7 @@ class Post(models.Model):
     )
 
     class Meta:
-        # не проходит тесты, если ставлю -pub_date, как было раньше в проекте
-        ordering = ['pub_date']
+        ordering = ['-pub_date']
 
     def __str__(self):
         return self.text[:50]
